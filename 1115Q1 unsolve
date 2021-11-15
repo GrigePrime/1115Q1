@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int seed,n=0,a,table;
+    scanf("%d",&seed);
+    srand(seed);
+    int arr[42];
+    for(;n<6;n++){
+        a=(rand()%6)+1;
+        arr[n]=a;
+        // for(int i=0;i<6;i++){
+        //     if(a==arr[i]){
+
+        //     }else if(a!=arr[i]){
+        //         arr[n]=a;
+        //     }
+        // }
+    }
+    for(int a=0;a<6;a++){
+        for(int b=0;b<6;b++){
+            if(arr[a]<arr[b]){
+                table=arr[a];
+                arr[a]=arr[b];
+                arr[b]=table;
+            }
+        }
+    }
+    for(int c=0;c<6;c++){
+        printf("%-4d",arr[c]);
+    }
+}
